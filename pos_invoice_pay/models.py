@@ -155,7 +155,7 @@ class PosConfig(models.Model):
     _inherit = "pos.config"
 
     def _get_default_writeoff_account(self):
-        acc = self.env["account.account"].search([("code", "=", 220000)]).id
+        acc = self.env["account.account"].search([("code", "=", 800100)]).id
         return acc if acc else False
 
     show_invoices = fields.Boolean(help="Show invoices in POS", default=True)
